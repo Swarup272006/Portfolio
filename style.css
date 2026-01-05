@@ -1,0 +1,176 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* LOADER */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#loader h1 {
+  font-size: 4rem;
+  letter-spacing: 0.3em;
+}
+
+/* MAIN */
+#main {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  padding: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-sub {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #b5b5b5;
+  max-width: 500px;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #cfcfcf;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* WORK */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.work-card {
+  height: 200px;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  background: #1f1f1f;
+}
+
+/* CONTACT */
+.contact-btn {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* CUSTOM CURSOR */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+/* Hover effects */
+.work-card:hover ~ .cursor,
+.contact-btn:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: rgba(255,255,255,0.2);
+}
+.work-card {
+  padding: 2rem;
+  text-align: left;
+}
+
+.work-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+.work-card p {
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  line-height: 1.5;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+
